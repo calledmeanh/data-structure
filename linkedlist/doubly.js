@@ -1,4 +1,4 @@
-/* const { NodeForDoubly } = require('./node'); */
+const { NodeForDoubly } = require("./node");
 
 class NodeOriginLL {
   data;
@@ -130,10 +130,4 @@ class DoublyLinkedList {
     }
   };
 }
-
-const ll = new DoublyLinkedList();
-for (let i = 0; i < 100; i++) {
-  ll.addTail(Math.floor(Math.random() * 100));
-}
-ll.sort();
-console.log(ll.getHead());
+module.exports = DoublyLinkedList;
