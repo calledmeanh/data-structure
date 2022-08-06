@@ -15,48 +15,46 @@
     nó quyết định số lần phân hoạch.
 */
 
-const quickSort = (a, l, r, compare = 0, inner = 0, outer = 0) => {
-    let i = l;
-    outer++;
-    let j = r;
-    outer++;
-    let x = a[Math.floor((l + r) / 2)];
-    outer++;
-    while (i < j) {
-        compare++;
-        while (a[i] < x) {
-            compare++;
-            i++;
-        }
-        while (a[j] > x) {
-            compare++;
-            j--;
-        } 
-        if (i <= j) {
-            compare++;
-            let t = a[i];
-            inner++;
-            a[i] = a[j];
-            inner++;
-            a[j] = t;
-            inner++;
-            i++;
-            j--;
-        }
+const quickSort = (arr, l, r, compare = 0, inner = 0, outer = 0) => {
+  let i = l;
+  outer++;
+  let j = r;
+  outer++;
+  let x = arr[Math.floor((l + r) / 2)];
+  outer++;
+  while (i < j) {
+    compare++;
+    while (arr[i] < x) {
+      compare++;
+      i++;
     }
-    if (l < j){
-        compare++;
-        quickSort(a, l, j, compare, inner, outer);
+    while (arr[j] > x) {
+      compare++;
+      j--;
     }
-        
-    if (i < r){
-        compare++;
-        quickSort(a, i, r, compare, inner, outer);
+    if (i <= j) {
+      compare++;
+      let t = arr[i];
+      inner++;
+      arr[i] = arr[j];
+      inner++;
+      arr[j] = t;
+      inner++;
+      i++;
+      j--;
     }
-        
-    console.log(`compare: ${compare}, inner: ${inner}, outer: ${outer}`);
+  }
+  if (l < j) {
+    compare++;
+    quickSort(arr, l, j, compare, inner, outer);
+  }
+
+  if (i < r) {
+    compare++;
+    quickSort(arr, i, r, compare, inner, outer);
+  }
+
+  return arr;
 };
 
-// quickSort(sortedArr, 0, sortedArr.length - 1);   // compare: 13, inner: 3 , outer: 3
-// quickSort(reverseArr, 0, reverseArr.length - 1); // compare: 12, inner: 15, outer: 3
-// quickSort(randomArr, 0, randomArr.length - 1);   // compare: 13, inner: 6 , outer: 3
+module.exports = quickSort;

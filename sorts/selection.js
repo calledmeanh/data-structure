@@ -10,30 +10,28 @@
 */
 
 const selectionSort = (arr, compare = 0, inner = 0, outer = 0) => {
-    let arrCopy = arr.slice();
-    for (let i = 0; i < arrCopy.length - 1; i++) {
-        outer++;
-        let min = i;
-        outer++;
-        for (let j = i + 1; j < arrCopy.length; j++) {
-            inner++;
-            if (arrCopy[min] > arrCopy[j]) {
-                compare++;
-                min = j;
-                inner++
-            }
-        }
-        let t = arrCopy[i];
-        outer++;
-        arrCopy[i] = arrCopy[min];
-        outer++;
-        arrCopy[min] = t;
-        outer++;
+  for (let i = 0; i < arr.length - 1; i++) {
+    outer++;
+    let min = i;
+    outer++;
+    for (let j = i + 1; j < arr.length; j++) {
+      inner++;
+      if (arr[min] > arr[j]) {
+        compare++;
+        min = j;
+        inner++;
+      }
     }
+    let t = arr[i];
+    outer++;
+    arr[i] = arr[min];
+    outer++;
+    arr[min] = t;
+    outer++;
+  }
 
-    console.log(`compare: ${compare}, inner: ${inner}, outer: ${outer}`);
+  console.log(`compare: ${compare}, inner: ${inner}, outer: ${outer}`);
+  console.log(arr);
 };
 
-// selectionSort(sortedArr);  // compare: 0 , inner: 45, outer: 45
-// selectionSort(reverseArr); // compare: 25, inner: 70, outer: 45
-// selectionSort(randomArr);  // compare: 14, inner: 59, outer: 45
+module.exports = selectionSort;

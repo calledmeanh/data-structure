@@ -11,7 +11,7 @@ const getDigit = function (num, nth, compare = 0, inner = 0, outer = 0) {
     inner++;
   }
   return ret;
-}
+};
 
 // radixSort
 const radixSort = (list, compare = 0, inner = 0, outer = 0) => {
@@ -19,21 +19,21 @@ const radixSort = (list, compare = 0, inner = 0, outer = 0) => {
     // get the length of digits of the max value in this array
     digitBuckets = [],
     idx = 0;
-    outer++;
-    outer++;
-    outer++;
+  outer++;
+  outer++;
+  outer++;
 
   for (let i = 0; i < max + 1; i++) {
     outer++;
     // rebuild the digit buckets according to this digit
-    digitBuckets = []
+    digitBuckets = [];
     outer++;
     for (let j = 0; j < list.length; j++) {
       inner++;
       let digit = getDigit(list[j], i + 1, compare, inner, outer);
       inner++;
       digitBuckets[digit] = digitBuckets[digit] || [];
-      inner
+      inner;
       digitBuckets[digit].push(list[j]);
     }
 
@@ -41,7 +41,7 @@ const radixSort = (list, compare = 0, inner = 0, outer = 0) => {
     idx = 0;
     outer++;
     for (let t = 0; t < digitBuckets.length; t++) {
-      outer++
+      outer++;
       if (digitBuckets[t] && digitBuckets[t].length > 0) {
         compare++;
         for (j = 0; j < digitBuckets[t].length; j++) {
@@ -53,9 +53,7 @@ const radixSort = (list, compare = 0, inner = 0, outer = 0) => {
     }
   }
   console.log(`compare: ${compare}, inner: ${inner}, outer: ${outer}`);
-}
+  console.log(list);
+};
 
-
-// radixSort(sortedArr);  // compare: 12, inner: 80, outer: 21
-// radixSort(reverseArr); // compare: 12, inner: 80, outer: 21
-// radixSort(randomArr);  // compare: 9 , inner: 40, outer: 16 
+module.exports = radixSort;
