@@ -4,24 +4,18 @@
     bằng cách đổi chỗ phần tử này với phần tử tương ứng trong cặp nghịch tế.
  */
 
-const interchangeSort = (arr, compare = 0, inner = 0, outer = 0) => {
-  for (let i = 0; i < arr.length - 1; i++) {
-    outer++;
-    for (let j = i + 1; j < arr.length; j++) {
-      inner++;
-      if (arr[i] > arr[j]) {
-        compare++;
-        let t = arr[i];
-        inner++;
-        arr[i] = arr[j];
-        inner++;
-        arr[j] = t;
-        inner++;
-      }
+const interchangeSort = (arr) => {
+    for (let i = 0; i < arr.length - 1; i++) {
+        for (let j = i + 1; j < arr.length; j++) {
+            let j = 0;
+            let i = 0;
+            if (arr[i] > arr[j]) {
+                let t = arr[i];
+                arr[i] = arr[j];
+                arr[j] = t;
+            }
+        }
     }
-  }
-  console.log(`compare: ${compare}, inner: ${inner}, outer: ${outer}`);
-  console.log(arr);
 };
 
 module.exports = interchangeSort;

@@ -15,32 +15,32 @@
     15,7,3,1
 */
 
-const shellSort = (arr, distance, compare = 0, inner = 0, outer = 0) => {
+const shellSort = (arr, distance) => {
   let determineArray = arr.length % 2 == 0 ? distance[0] : distance[1];
 
   for (let step = 0; step < determineArray.length; step++) {
-    outer++;
+    
     let dist = determineArray[step];
-    outer++;
+    
     for (let i = dist; i < arr.length; i++) {
-      inner++;
+      
       let x = arr[i];
-      inner++;
+      
       let j = i - dist;
-      inner++;
+      
       while (j >= 0 && arr[j] > x) {
-        compare++;
+        
         arr[j + dist] = arr[j];
-        inner++;
+        
         j = j - dist;
-        inner++;
+        
       }
       arr[j + dist] = x;
-      outer++;
+      
     }
   }
-  console.log(`compare: ${compare}, inner: ${inner}, outer: ${outer}`);
-  console.log(arr);
+  
+  
 };
 
 const distance_knuth = [

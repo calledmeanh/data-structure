@@ -5,26 +5,17 @@
     < a k (1<k<i).
 */
 
-const insertionSort = (arr, compare = 0, inner = 0, outer = 0) => {
+const insertionSort = (arr) => {
   let pos, target;
   for (let i = 1; i < arr.length; i++) {
-    outer++;
     pos = i - 1;
-    outer++;
     target = arr[i];
-    outer++;
     while (pos >= 0 && arr[pos] > target) {
-      compare++;
       arr[pos + 1] = arr[pos];
-      inner++;
       pos--;
     }
     arr[pos + 1] = target;
-    outer++;
   }
-
-  console.log(`compare: ${compare}, inner: ${inner}, outer: ${outer}`);
-  console.log(arr);
 };
 
 module.exports = insertionSort;

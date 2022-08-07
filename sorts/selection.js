@@ -9,29 +9,29 @@
     vị trí đúng ở đầu dãy.
 */
 
-const selectionSort = (arr, compare = 0, inner = 0, outer = 0) => {
+const selectionSort = (arr) => {
   for (let i = 0; i < arr.length - 1; i++) {
-    outer++;
+    
     let min = i;
-    outer++;
+    
     for (let j = i + 1; j < arr.length; j++) {
-      inner++;
+      
       if (arr[min] > arr[j]) {
-        compare++;
+        
         min = j;
-        inner++;
+        
       }
     }
     let t = arr[i];
-    outer++;
+    
     arr[i] = arr[min];
-    outer++;
+    
     arr[min] = t;
-    outer++;
+    
   }
 
-  console.log(`compare: ${compare}, inner: ${inner}, outer: ${outer}`);
-  console.log(arr);
+  
+  
 };
 
 module.exports = selectionSort;

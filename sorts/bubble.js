@@ -6,24 +6,18 @@
     thứ i sẽ có vị trí đầu dãy là i.
 */
 
-const bubbleSort = (arr, compare = 0, inner = 0, outer = 0) => {
+const bubbleSort = (arr) => {
   let arrCopy = arr.slice();
   // cách 1: xuất phát từ ĐẦU dãy và duyệt các phần tử ở CUỐI dãy.
   // Tìm các phần tử LỚN trong dãy nghịch thế để đưa về CUỐI mảng
 
   //step 1: start at the first index of array and sort at the end
   for (let i = 0; i < arrCopy.length - 1; i++) {
-    outer++;
     for (let j = arrCopy.length - 1; j > i; j--) {
-      inner++;
       if (arrCopy[j - 1] > arrCopy[j]) {
-        compare++;
         let t = arrCopy[j - 1];
-        inner++;
         arrCopy[j - 1] = arrCopy[j];
-        inner++;
         arrCopy[j] = t;
-        inner++;
       }
     }
   }
@@ -33,23 +27,14 @@ const bubbleSort = (arr, compare = 0, inner = 0, outer = 0) => {
 
   //step 1: start at the end index of array and sort at the first
   /* for (let i = arrCopy.length - 1; i > 0; i--) {
-        outer++;
-        for (let j = 0; j < i; j++) {
-            inner++;
-            if (arrCopy[j + 1] < arrCopy[j]) {
-                compare++;
-                let t = arrCopy[j + 1];
-                inner++;
-                arrCopy[j + 1] = arrCopy[j];
-                inner++;
-                arrCopy[j] = t;
-                inner++;
-            }
-        }
-    } */
-
-  console.log(`compare: ${compare}, inner: ${inner}, outer: ${outer}`);
-  console.log(arrCopy);
+    for (let j = 0; j < i; j++) {
+      if (arrCopy[j + 1] < arrCopy[j]) {
+        let t = arrCopy[j + 1];
+        arrCopy[j + 1] = arrCopy[j];
+        arrCopy[j] = t;
+      }
+    }
+  } */
 };
 
 module.exports = bubbleSort;

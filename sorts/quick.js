@@ -15,42 +15,42 @@
     nó quyết định số lần phân hoạch.
 */
 
-const quickSort = (arr, l, r, compare = 0, inner = 0, outer = 0) => {
+const quickSort = (arr, l, r) => {
   let i = l;
-  outer++;
+  
   let j = r;
-  outer++;
+  
   let x = arr[Math.floor((l + r) / 2)];
-  outer++;
+  
   while (i < j) {
-    compare++;
+    
     while (arr[i] < x) {
-      compare++;
+      
       i++;
     }
     while (arr[j] > x) {
-      compare++;
+      
       j--;
     }
     if (i <= j) {
-      compare++;
+      
       let t = arr[i];
-      inner++;
+      
       arr[i] = arr[j];
-      inner++;
+      
       arr[j] = t;
-      inner++;
+      
       i++;
       j--;
     }
   }
   if (l < j) {
-    compare++;
+    
     quickSort(arr, l, j, compare, inner, outer);
   }
 
   if (i < r) {
-    compare++;
+    
     quickSort(arr, i, r, compare, inner, outer);
   }
 

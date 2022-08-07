@@ -1,0 +1,12 @@
+{
+  "name": "data-structure",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:calledmeanh/data-structure.git",
+  "author": "Hoang Anh <calledmeanh@gmail.com>",
+  "license": "MIT",
+  "push": "prettier --write && git push origin",
+  "dependencies": {
+    "prettier": "^2.7.1"
+  }
+}
