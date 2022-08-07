@@ -1,6 +1,7 @@
 const bubbleSort = require("./bubble");
 const insertionSort = require("./insertion");
 const interchangeSort = require("./interchange");
+const mergeSort = require("./merge");
 const quickSort = require("./quick");
 const radixSort = require("./radix");
 const selectionSort = require("./selection");
@@ -24,6 +25,10 @@ class Sort {
 
   interchange() {
     interchangeSort(this.arr);
+  }
+
+  merge() {
+    return mergeSort(this.arr);
   }
 
   quick() {
