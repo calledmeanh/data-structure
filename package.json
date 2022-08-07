@@ -5,7 +5,10 @@
   "repository": "git@github.com:calledmeanh/data-structure.git",
   "author": "Hoang Anh <calledmeanh@gmail.com>",
   "license": "MIT",
-  "push": "prettier --write && git push origin",
+  "scripts": {
+    "build": "git push origin",
+    "prebuild": "prettier --write ."
+  },
   "dependencies": {
     "prettier": "^2.7.1"
   }
