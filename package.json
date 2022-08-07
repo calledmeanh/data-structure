@@ -6,8 +6,7 @@
   "author": "Hoang Anh <calledmeanh@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "build": "git push origin",
-    "prebuild": "prettier --write ."
+    "build": "prettier --write ."
   },
   "dependencies": {
     "prettier": "^2.7.1"

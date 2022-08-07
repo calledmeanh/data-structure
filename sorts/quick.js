@@ -17,40 +17,34 @@
 
 const quickSort = (arr, l, r) => {
   let i = l;
-  
+
   let j = r;
-  
+
   let x = arr[Math.floor((l + r) / 2)];
-  
+
   while (i < j) {
-    
     while (arr[i] < x) {
-      
       i++;
     }
     while (arr[j] > x) {
-      
       j--;
     }
     if (i <= j) {
-      
       let t = arr[i];
-      
+
       arr[i] = arr[j];
-      
+
       arr[j] = t;
-      
+
       i++;
       j--;
     }
   }
   if (l < j) {
-    
     quickSort(arr, l, j, compare, inner, outer);
   }
 
   if (i < r) {
-    
     quickSort(arr, i, r, compare, inner, outer);
   }
 

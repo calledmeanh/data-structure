@@ -19,28 +19,21 @@ const shellSort = (arr, distance) => {
   let determineArray = arr.length % 2 == 0 ? distance[0] : distance[1];
 
   for (let step = 0; step < determineArray.length; step++) {
-    
     let dist = determineArray[step];
-    
+
     for (let i = dist; i < arr.length; i++) {
-      
       let x = arr[i];
-      
+
       let j = i - dist;
-      
+
       while (j >= 0 && arr[j] > x) {
-        
         arr[j + dist] = arr[j];
-        
+
         j = j - dist;
-        
       }
       arr[j + dist] = x;
-      
     }
   }
-  
-  
 };
 
 const distance_knuth = [
