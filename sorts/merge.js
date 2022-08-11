@@ -2,6 +2,7 @@
     Ý tưởng: (chia để trị)
     Phân chia dãy ban đầu thành 2 mảng bằng nhau sau đó tiếp tục phân chia 2 mảng đó đến khi nào còn 1 phần tử
     thì bắt đầu trộn vào mảng mới theo thứ tự đã đc sắp xếp
+    Độ phức tạp O(NlogN) cho mọi trường hợp
  */
 
 const mergeSort = (arr) => {
