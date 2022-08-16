@@ -7,7 +7,7 @@ const radixSort = require("./radix");
 const selectionSort = require("./selection");
 const shellSort = require("./shell");
 
-const { randomArr } = require("./arrays/array");
+const { randomArr } = require("../arrays/number");
 
 class Sort {
   constructor(arr) {
