@@ -5,9 +5,10 @@
 ## Process:
 
 ✔ : sort  
-❌: linked-list (updating...💬)  
-❌: tree (updating...💬)
+✔: linked-list
+✔: binary search tree
+❌: avl tree (updating...💬)
 
 Author: **_Hoang Anh_** :shipit:  
 Created At: 25-08-2018  
-Updated At: 25-08-2020
+Updated At: 17-08-2022
