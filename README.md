@@ -7,7 +7,7 @@
 ✔ : sort  
 ✔: linked-list  
 ✔: binary search tree  
-✔: avl tree  
+✔: avl tree
 
 Author: **_Hoang Anh_** :shipit:  
 Created At: 25-08-2018  
